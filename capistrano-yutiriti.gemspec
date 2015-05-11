@@ -15,5 +15,5 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0")
   spec.require_paths = ["lib"]
 
-  gem.add_dependency "capistrano", "~> 3.4"
+  spec.add_dependency "capistrano", "~> 3.4"
 end
