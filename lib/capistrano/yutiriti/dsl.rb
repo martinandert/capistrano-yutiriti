@@ -2,7 +2,7 @@ module Capistrano
   module Yutiriti
     module DSL
       def config_path
-        shared_path.join("config")
+        shared_path.join("env")
       end
 
       def dot_env_path

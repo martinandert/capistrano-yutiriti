@@ -29,7 +29,7 @@ namespace :buildpack do
         execute :chmod, "-f +x bin/{detect,compile} || true"
 
         execute :"bin/detect", release_path, "> /dev/null"
-        execute :"bin/compile", release_path, shared_path.join("cache/build"), shared_path.join("config/env")
+        execute :"bin/compile", release_path, shared_path.join("cache/build"), config_path
       end
 
       export_file = "#{bp_dir}/export"
