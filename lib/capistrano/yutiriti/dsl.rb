@@ -16,7 +16,7 @@ module Capistrano
 
         within config_path do
           vars.each do |key, value|
-            execute :echo, value, ">", key
+            execute :echo, value.to_s.inspect, ">", key
             execute :chmod, "600", key
           end
         end

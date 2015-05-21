@@ -11,8 +11,6 @@ task :config do
         done
       fi
     EOCOMMAND
-
-    puts vars
   end
 end
 
