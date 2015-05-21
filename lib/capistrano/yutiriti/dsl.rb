@@ -43,7 +43,7 @@ module Capistrano
           rm -f $dot_env_path
           mkdir -p $config_path
           for e in $(ls $config_path)
-            do echo "$e='$(cat $config_path/$e)'" >> $dot_env_path
+            do echo "$e=$(cat $config_path/$e)" >> $dot_env_path
           done
           chmod 600 $dot_env_path
         EOCOMMAND

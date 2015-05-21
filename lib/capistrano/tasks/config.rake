@@ -42,7 +42,7 @@ namespace :config do
         config_path=#{path}
         if [ -d "$config_path" ]
           then for e in $(ls $config_path)
-            do export "$e='$(cat $config_path/$e)'"
+            do export "$e=$(cat $config_path/$e)"
           done
         fi
       EOCOMMAND
